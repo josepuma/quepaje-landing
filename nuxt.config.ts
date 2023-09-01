@@ -4,5 +4,8 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/prismic",'@nuxtjs/tailwindcss'],
   prismic: {
     endpoint: "quepaje-landing"
-  }
+  },
+  build: {
+    transpile: ['gsap'],
+  },
 })
