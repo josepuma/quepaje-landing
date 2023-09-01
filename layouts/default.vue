@@ -10,3 +10,11 @@
 .bg-black
     slot
 </template>
+
+<style>
+
+    *{
+        font-family: 'Montserrat', sans-serif;
+    }
+
+</style>
