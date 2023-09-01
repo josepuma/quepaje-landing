@@ -16,6 +16,7 @@
     }
 
     interface Props {
+        id: string;
         title: string;
         content: string;
         links: Array<LinkSection> | Array<LinkGroup>;
@@ -25,7 +26,7 @@
         type: string;
     }
 
-    defineProps<Props>();
+    const props = defineProps<Props>();
 
 </script>
 

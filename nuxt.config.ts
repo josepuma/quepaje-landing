@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/prismic",'@nuxtjs/tailwindcss'],
   ssr: false,
+  spaLoadingTemplate: false,
   prismic: {
     endpoint: "quepaje-landing"
   },
