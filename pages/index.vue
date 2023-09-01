@@ -16,7 +16,7 @@
 </script>
 
 <template lang="pug">
-.h-screen
-    section
-        img.w-full.main-banner.opacity-0(src="@/assets/img/main_banner.jpg")
+div 
+    section.h-screen
+        img.main-banner.opacity-0(src="@/assets/img/main_banner.jpg")
 </template>

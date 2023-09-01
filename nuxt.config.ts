@@ -5,6 +5,15 @@ export default defineNuxtConfig({
   prismic: {
     endpoint: "quepaje-landing"
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'icon', type : 'image/png', href: 'favicon.png'
+        }
+      ]
+    }
+  },
   build: {
     transpile: ['gsap'],
   },
