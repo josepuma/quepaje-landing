@@ -5,7 +5,7 @@
     interface Props {
         title: string;
         content: string;
-        links: Array<string>;
+        links?: Array<string>;
     }
 
     defineProps<Props>();

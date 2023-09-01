@@ -65,16 +65,16 @@
 
 <template lang="pug">
 section.py-24(:id="id")
-    .grid.grid-cols-1.flex.items-center.gap-8(class="md:grid-cols-2")
+    .grid.grid-cols-1.flex.gap-8(class="md:grid-cols-2")
         div(:class="{ 'md:order-last' : align === 'left' }")
-            h3.font-extrabold.text-3xl.mb-4.content-title-animation
+            h3.font-extrabold.text-3xl.mb-4
                 span.text-white {{ title }} 
                 span.bg-pink-600.text-white.ml-4.rounded-xl.px-4 {{ badge }}
             p.text-slate-200.text-lg {{ content }}
             .pt-6
                 h6.text-xl.text-lime-500.font-bold.py-4 Menú Tropical     
                 .grid.grid-cols-1.gap-6.gap-y-12(class="md:grid-cols-2", v-if="type === 'groupLink'")
-                    div.content-animation(v-for="link in links")
+                    div(v-for="link in links")
                         .mb-6 
                             h6.text-white.font-medium.uppercase.tracking-wider {{ link.title }}
                             h6.text-slate-400.font-medium.uppercase.tracking-wider  {{ link.subtitle }}
@@ -88,7 +88,7 @@ section.py-24(:id="id")
                                                 p.text-white.text-md.transition(class="hover:text-pink-500") {{  sublink.title  }}
                                                 p.uppercase.text-slate-400.text-sm.tracking-wider {{ sublink.subtitle }}
                 .grid.grid-cols-1.gap-8(class="md:grid-cols-1", v-if="type === 'singleLink'")
-                    div.content-animation(v-for="link in links")
+                    div(v-for="link in links")
                         NuxtLink(to="/") 
                             .flex.gap-2
                                 vsx-icon.text-pink-500(iconName="MusicCircle", type="bold")
@@ -97,6 +97,6 @@ section.py-24(:id="id")
                                     p.uppercase.text-slate-400.text-sm.tracking-wider {{ link.subtitle }}
         div
             .grid.grid-flow-col.gap-4
-                img(v-for="(image, index) in images", :src="image.url", :class="{ 'mt-16' : (index + 1) % 2 == 0 }")
+                img(v-for="(image, index) in images", :src="image.url")
     
 </template>

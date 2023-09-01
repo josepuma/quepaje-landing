@@ -36,7 +36,7 @@
 section.py-24(:id="id")
     .grid.grid-cols-1.flex.items-center.gap-8(class="md:grid-cols-3")
         div.col-span-2(:class="{ 'md:order-last' : align === 'right' }")
-            h3.font-extrabold.text-3xl.mb-4.content-title-animation
+            h3.font-extrabold.text-3xl.mb-4
                 span.text-pink-500 {{ title }} 
             p.text-slate-200.text-lg {{ content }}
             .pt-6
@@ -47,7 +47,7 @@ section.py-24(:id="id")
     .py-4
         h6.text-center.text-xl.text-lime-500.font-bold.py-4 Videos
     .grid.grid-cols-1.gap-8.items-stretch(class="md:grid-cols-4")
-        div.content-animation.bg-pink-500(v-for="video in videos")
+        div.bg-pink-500(v-for="video in videos")
             a.relative(:href="video.videoUrl", target="_blank")
                 img.w-full(:src="video.imageUrl")
                 .bg-pink-500.inset-0.absolute.opacity-0.transition(class="hover:opacity-80")
