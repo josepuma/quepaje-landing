@@ -14,6 +14,13 @@
         subtitle?: string;
     }
 
+    interface VideoSection {
+        title: string;
+        subtitle?: string;
+        imageUrl: string;
+        videoUrl: string;
+    }
+
     interface Image {
         url: string;
     }
@@ -77,6 +84,17 @@
         },
     ]
 
+    const videosLeyendas: Array<VideoSection> = [
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial', subtitle: 'Décadas del 60 al  80' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial', subtitle: 'Décadas del 70 y 80' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial', subtitle: 'Décadas del 70 y 80' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
+    ]
+
     const imagesGuepajeA: Array<Image> = [
         { url: '/img/header_a.jpg' },
         { url: '/img/header_b.jpg' }
@@ -92,4 +110,7 @@ div
         .container.mx-auto.px-4
             MainSectionImageContent(id="header-a", :images="imagesGuepajeA", type="singleLink", badge="2022", align="right", title="Güepajé Vol. 1", content="Para esta primera edición, decidimos enfocarnos en la historia de la cumbia peruana a partir de los sellos y disqueras de Lima que hicieron posible su crecimiento y desarrollo entre las décadas del 60 al 80. Este encuentro incluyó sesiones de escucha con músicos que formaron parte de agrupaciones históricas de cumbia peruana, así como conversatorios con investigadores, especialistas y testigos de época, quienes ofrecieron su visión y testimonio sobre la cultura creada a partir de este género. Por último, una exposición museográfica cuyos contenidos les presentamos a continuación:", :links="linksGuepajeA")
             MainSectionImageContent(id="header-b", :images="imagesGuepajeA", type="groupLink", badge="2023", align="left", title="Güepajé Vol. 2", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :links="linksGuepajeB")
+            MainSectionVideoContent(align="left", :images="imagesGuepajeA", title="Leyendas de la cumbia peruana", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :videos="videosLeyendas")
+            MainSectionVideoContent(align="right", :images="imagesGuepajeA", title="Hablemos sobre cumbia peruana", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :videos="videosLeyendas")
+            MainSectionVideoContent(align="left", :images="imagesGuepajeA", title="Créditos", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :videos="videosLeyendas")
 </template>

@@ -14,7 +14,6 @@
                 scrollTrigger: {
                     trigger: `.section-container`,
                     start: "top center",
-                    scrub: true,
                     end: "+=500",
                 },
             })
