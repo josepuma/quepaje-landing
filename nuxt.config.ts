@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     endpoint: "quepaje-landing"
   },
   app: {
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       link: [
         {

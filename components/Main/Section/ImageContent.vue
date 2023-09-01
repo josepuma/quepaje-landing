@@ -81,7 +81,7 @@ section.py-24(:id="id")
                         .pl-0
                             .grid.grid-cols-1.gap-8(class="md:grid-cols-1")
                                 div(v-for="sublink in link.links")
-                                    NuxtLink(to="/") 
+                                    NuxtLink(:to="`/${sublink.id}`") 
                                         .flex.gap-2
                                             vsx-icon.text-pink-500(iconName="MusicCircle", type="bold")
                                             div
@@ -89,7 +89,7 @@ section.py-24(:id="id")
                                                 p.uppercase.text-slate-400.text-sm.tracking-wider {{ sublink.subtitle }}
                 .grid.grid-cols-1.gap-8(class="md:grid-cols-1", v-if="type === 'singleLink'")
                     div(v-for="link in links")
-                        NuxtLink(to="/") 
+                        NuxtLink(:to="`/${link.id}`") 
                             .flex.gap-2
                                 vsx-icon.text-pink-500(iconName="MusicCircle", type="bold")
                                 div

@@ -10,6 +10,7 @@
     }
 
     interface LinkSection {
+        id: string;
         title: string;
         subtitle?: string;
     }
@@ -30,7 +31,7 @@
     );
     
 
-    onMounted(() => {
+    /*onMounted(() => {
         $gsap.to('.main-banner', {
             opacity: 1,
             duration: 2,
@@ -40,47 +41,47 @@
                 scale: 1.1
             }
         })
-    })
+    })*/
 
     const linksGuepajeA: Array<LinkSection> = [
-        { title: 'Sellos discográficos limeños de la cumbia peruana', subtitle: 'Décadas del 60 al  80' },
-        { title: 'Sellos discográficos limeños de la chicha peruana', subtitle: 'Décadas del 70 y 80' },
-        { title: 'Sellos discográficos periféricos', subtitle: 'Décadas del 70 y 80' },
-        { title: 'Sección Especial: Frank Ventura, pionero de la estética chicha' },
-        { title: 'Sección Especial: Productores musicales de la cumbia peruana' },
-        { title: 'Sección Especial: Así se fabricaba un disco de cumbia peruana' },
+        { id: 'sellos_discograficos_cumbia', title: 'Sellos discográficos limeños de la cumbia peruana', subtitle: 'Décadas del 60 al  80' },
+        { id: 'sellos_discograficos_chicha',  title: 'Sellos discográficos limeños de la chicha peruana', subtitle: 'Décadas del 70 y 80' },
+        { id: 'sellos_discograficos_perifericos',  title: 'Sellos discográficos periféricos', subtitle: 'Décadas del 70 y 80' },
+        { id: 'frank_ventura',  title: 'Sección Especial: Frank Ventura, pionero de la estética chicha' },
+        { id: 'productores_musicales',  title: 'Sección Especial: Productores musicales de la cumbia peruana' },
+        { id: 'fabricacion_disco',  title: 'Sección Especial: Así se fabricaba un disco de cumbia peruana' },
     ]
 
     const linksGuepajeB: Array<LinkGroup> = [
         { title: 'Cumbia Selvática', subtitle: 'Décadas del 50 al 90', 
             links: [ 
-                { title: 'Década del 50: Los orígenes' }, 
-                { title: 'Década del 60: El surf selvático' }, 
-                { title: 'Década del 70: Poder verde' },
-                { title: 'Década del 80: De regreso a las raíces' },
-                { title: 'Década del 90: La tecnocumbia' } ] 
+                { id: 'los_origenes',  title: 'Década del 50: Los orígenes' }, 
+                { id: 'surf_selvatico',  title: 'Década del 60: El surf selvático' }, 
+                { id: 'poder_verde',  title: 'Década del 70: Poder verde' },
+                { id: 'regreso_raices',  title: 'Década del 80: De regreso a las raíces' },
+                { id: 'tecnocumbia',  title: 'Década del 90: La tecnocumbia' } ] 
         },
         { title: 'Cumbia Andina', subtitle: 'Décadas del 50 al 90', 
             links: [ 
-                { title: 'El Valle del Mantaro' }, 
-                { title: 'Cumbia volcánica' }, 
-                { title: 'Frutillada tropical ' },
-                { title: 'Cumbia sureña' } ] 
+                { id: 'valle_mantaro',  title: 'El Valle del Mantaro' }, 
+                { id: 'cumbia_volcanica',  title: 'Cumbia volcánica' }, 
+                { id: 'frutillada_tropical',  title: 'Frutillada tropical ' },
+                { id: 'cumbia_surena',  title: 'Cumbia sureña' } ] 
         },
         { title: 'Cumbia Costeña', subtitle: 'Décadas del 50 al 90', 
             links: [ 
-                { title: 'Cumbia norteña' }, 
-                { title: 'Cumbia regional limeña' }, 
-                { title: 'El grito de Independencia ' },
-                { title: 'Cumbia de la Carretera Central' },
-                { title: 'La saxocumbia de Huarochirí' },
-                { title: 'Cumbias del Norte Chico  ' } ] 
+                { id: 'cumbia_nortena',  title: 'Cumbia norteña' }, 
+                { id: 'cumbia_limena',  title: 'Cumbia regional limeña' }, 
+                { id: 'grito_independencia',  title: 'El grito de Independencia ' },
+                { id: 'cumbia_carretera',  title: 'Cumbia de la Carretera Central' },
+                { id: 'saxocumbia',  title: 'La saxocumbia de Huarochirí' },
+                { id: 'cumbia_norte_chico',  title: 'Cumbias del Norte Chico  ' } ] 
         },
         { title: 'Secciones Especiales', 
             links: [ 
-                { title: 'Las mujeres en la cumbia peruana (Décadas del 50 al 90)' }, 
-                { title: 'Rosita Producciones' }, 
-                { title: 'Mapa de las cumbias del Perú' } ] 
+                { id: 'mujeres_cumbia',  title: 'Las mujeres en la cumbia peruana (Décadas del 50 al 90)' }, 
+                { id: 'rosita',  title: 'Rosita Producciones' }, 
+                { id: 'mapa_cumbias',  title: 'Mapa de las cumbias del Perú' } ] 
         },
     ]
 
@@ -105,7 +106,7 @@
 <template lang="pug">
 div 
     section.min-h-screen
-        img.main-banner.w-full.opacity-0(src="@/assets/img/main_banner.jpg")
+        img.main-banner.w-full(src="@/assets/img/main_banner.jpg")
         MainSectionHeader(title="Presentación", content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga")
         .container.mx-auto.px-4
             MainSectionImageContent(id="header-a", :images="imagesGuepajeA", type="singleLink", badge="2022", align="right", title="Güepajé Vol. 1", content="Para esta primera edición, decidimos enfocarnos en la historia de la cumbia peruana a partir de los sellos y disqueras de Lima que hicieron posible su crecimiento y desarrollo entre las décadas del 60 al 80. Este encuentro incluyó sesiones de escucha con músicos que formaron parte de agrupaciones históricas de cumbia peruana, así como conversatorios con investigadores, especialistas y testigos de época, quienes ofrecieron su visión y testimonio sobre la cultura creada a partir de este género. Por último, una exposición museográfica cuyos contenidos les presentamos a continuación:", :links="linksGuepajeA")
