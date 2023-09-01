@@ -22,6 +22,7 @@
         images: Array<Image>;
         align: string;
         badge?: string;
+        type: string;
     }
 
     defineProps<Props>();
@@ -37,8 +38,22 @@ section.py-24
                 span.bg-pink-600.text-white.ml-4.rounded-xl.px-4 {{ badge }}
             p.text-slate-200.text-lg {{ content }}
             .pt-6
-                h6.text-xl.text-lime-500.font-bold.py-4 Menú Tropical
-                .grid.grid-cols-1.gap-10(class="md:grid-cols-1")
+                h6.text-xl.text-lime-500.font-bold.py-4 Menú Tropical     
+                .grid.grid-cols-1.gap-6.gap-y-12(class="md:grid-cols-2", v-if="type === 'groupLink'")
+                    div(v-for="link in links")
+                        .mb-6 
+                            h6.text-white.font-medium.uppercase.tracking-wider {{ link.title }}
+                            h6.text-slate-400.font-medium.uppercase.tracking-wider  {{ link.subtitle }}
+                        .pl-0
+                            .grid.grid-cols-1.gap-8(class="md:grid-cols-1")
+                                div(v-for="sublink in link.links")
+                                    NuxtLink(to="/") 
+                                        .flex.gap-2
+                                            vsx-icon.text-pink-500(iconName="MusicCircle", type="bold")
+                                            div
+                                                p.text-white.text-md.transition(class="hover:text-pink-500") {{  sublink.title  }}
+                                                p.uppercase.text-slate-400.text-sm.tracking-wider {{ sublink.subtitle }}
+                .grid.grid-cols-1.gap-8(class="md:grid-cols-1", v-if="type === 'singleLink'")
                     div(v-for="link in links")
                         NuxtLink(to="/") 
                             .flex.gap-2

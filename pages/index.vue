@@ -53,6 +53,28 @@
                 { title: 'Década del 80: De regreso a las raíces' },
                 { title: 'Década del 90: La tecnocumbia' } ] 
         },
+        { title: 'Cumbia Andina', subtitle: 'Décadas del 50 al 90', 
+            links: [ 
+                { title: 'El Valle del Mantaro' }, 
+                { title: 'Cumbia volcánica' }, 
+                { title: 'Frutillada tropical ' },
+                { title: 'Cumbia sureña' } ] 
+        },
+        { title: 'Cumbia Costeña', subtitle: 'Décadas del 50 al 90', 
+            links: [ 
+                { title: 'Cumbia norteña' }, 
+                { title: 'Cumbia regional limeña' }, 
+                { title: 'El grito de Independencia ' },
+                { title: 'Cumbia de la Carretera Central' },
+                { title: 'La saxocumbia de Huarochirí' },
+                { title: 'Cumbias del Norte Chico  ' } ] 
+        },
+        { title: 'Secciones Especiales', 
+            links: [ 
+                { title: 'Las mujeres en la cumbia peruana (Décadas del 50 al 90)' }, 
+                { title: 'Rosita Producciones' }, 
+                { title: 'Mapa de las cumbias del Perú' } ] 
+        },
     ]
 
     const imagesGuepajeA: Array<Image> = [
@@ -68,6 +90,6 @@ div
         img.main-banner.w-full.opacity-0(src="@/assets/img/main_banner.jpg")
         .container.mx-auto.px-4
             MainSectionHeader(title="Presentación", content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga")
-            MainSectionImageContent(:images="imagesGuepajeA", badge="2022", align="right", title="Güepajé Vol. 1", content="Para esta primera edición, decidimos enfocarnos en la historia de la cumbia peruana a partir de los sellos y disqueras de Lima que hicieron posible su crecimiento y desarrollo entre las décadas del 60 al 80. Este encuentro incluyó sesiones de escucha con músicos que formaron parte de agrupaciones históricas de cumbia peruana, así como conversatorios con investigadores, especialistas y testigos de época, quienes ofrecieron su visión y testimonio sobre la cultura creada a partir de este género. Por último, una exposición museográfica cuyos contenidos les presentamos a continuación:", :links="linksGuepajeA")
-            MainSectionImageContent(:images="imagesGuepajeA", badge="2023", align="left", title="Güepajé Vol. 2", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :links="linksGuepajeB")
+            MainSectionImageContent(:images="imagesGuepajeA", type="singleLink", badge="2022", align="right", title="Güepajé Vol. 1", content="Para esta primera edición, decidimos enfocarnos en la historia de la cumbia peruana a partir de los sellos y disqueras de Lima que hicieron posible su crecimiento y desarrollo entre las décadas del 60 al 80. Este encuentro incluyó sesiones de escucha con músicos que formaron parte de agrupaciones históricas de cumbia peruana, así como conversatorios con investigadores, especialistas y testigos de época, quienes ofrecieron su visión y testimonio sobre la cultura creada a partir de este género. Por último, una exposición museográfica cuyos contenidos les presentamos a continuación:", :links="linksGuepajeA")
+            MainSectionImageContent(:images="imagesGuepajeA", type="groupLink", badge="2023", align="left", title="Güepajé Vol. 2", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :links="linksGuepajeB")
 </template>
