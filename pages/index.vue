@@ -1,19 +1,64 @@
-<script setup>
+<script setup lang="ts">
     import { onMounted, onUnmounted, ref } from 'vue';
     const { client } = usePrismic();
+    const { $gsap, $ScrollTrigger } = useNuxtApp();
+
+    interface LinkGroup {
+        title: string;
+        subtitle?:string;
+        links: Array<LinkSection>;
+    }
+
+    interface LinkSection {
+        title: string;
+        subtitle?: string;
+    }
+
+    interface Image {
+        url: string;
+    }
+
     const { data: home } = await useAsyncData("home", () =>
         client.getSingle('home')
     );
+    
 
-    const { $gsap, $ScrollTrigger } = useNuxtApp();
     onMounted(() => {
         $gsap.to('.main-banner', {
             opacity: 1,
             duration: 2,
-            y: 0
+            y: 0,
+            scale: 1,
+            startAt: {
+                scale: 1.1
+            }
         })
     })
 
+    const linksGuepajeA: Array<LinkSection> = [
+        { title: 'Sellos discográficos limeños de la cumbia peruana', subtitle: 'Décadas del 60 al  80' },
+        { title: 'Sellos discográficos limeños de la chicha peruana', subtitle: 'Décadas del 70 y 80' },
+        { title: 'Sellos discográficos periféricos', subtitle: 'Décadas del 70 y 80' },
+        { title: 'Sección Especial: Frank Ventura, pionero de la estética chicha' },
+        { title: 'Sección Especial: Productores musicales de la cumbia peruana' },
+        { title: 'Sección Especial: Así se fabricaba un disco de cumbia peruana' },
+    ]
+
+    const linksGuepajeB: Array<LinkGroup> = [
+        { title: 'Cumbia Selvática', subtitle: 'Décadas del 50 al 90', 
+            links: [ 
+                { title: 'Década del 50: Los orígenes' }, 
+                { title: 'Década del 60: El surf selvático' }, 
+                { title: 'Década del 70: Poder verde' },
+                { title: 'Década del 80: De regreso a las raíces' },
+                { title: 'Década del 90: La tecnocumbia' } ] 
+        },
+    ]
+
+    const imagesGuepajeA: Array<Image> = [
+        { url: '/img/header_a.jpg' },
+        { url: '/img/header_b.jpg' }
+    ]
 
 </script>
 
@@ -23,4 +68,6 @@ div
         img.main-banner.w-full.opacity-0(src="@/assets/img/main_banner.jpg")
         .container.mx-auto.px-4
             MainSectionHeader(title="Presentación", content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga")
+            MainSectionImageContent(:images="imagesGuepajeA", badge="2022", align="right", title="Güepajé Vol. 1", content="Para esta primera edición, decidimos enfocarnos en la historia de la cumbia peruana a partir de los sellos y disqueras de Lima que hicieron posible su crecimiento y desarrollo entre las décadas del 60 al 80. Este encuentro incluyó sesiones de escucha con músicos que formaron parte de agrupaciones históricas de cumbia peruana, así como conversatorios con investigadores, especialistas y testigos de época, quienes ofrecieron su visión y testimonio sobre la cultura creada a partir de este género. Por último, una exposición museográfica cuyos contenidos les presentamos a continuación:", :links="linksGuepajeA")
+            MainSectionImageContent(:images="imagesGuepajeA", badge="2023", align="left", title="Güepajé Vol. 2", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :links="linksGuepajeB")
 </template>
