@@ -54,6 +54,6 @@ section.py-24
 
 
     .mt-16 
-        .grid.grid-cols-6.gap-4
-            img(:src="`img/logos/${i}.svg`", v-for="i in 12")
+        .grid.grid-cols-7.gap-4
+            img(:src="`img/logos/${i}.svg`", v-for="i in 7")
 </template>
