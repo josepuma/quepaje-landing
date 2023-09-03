@@ -30,7 +30,7 @@ section.py-24
         div.col-span-1
             h3.font-extrabold.text-3xl.mb-4
                 span.text-cyan-500 Créditos
-            p.text-white Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            //-p.text-white Lorem ipsum dolor sit amet consectetur adipisicing elit.
         div.col-span-4
             .flex.gap-6
                 div
