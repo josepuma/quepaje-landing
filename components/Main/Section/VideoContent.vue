@@ -46,13 +46,14 @@ section.py-24(:id="id")
       
     .py-4
         h6.text-center.text-xl.text-lime-500.font-bold.py-4 Videos
-    .grid.grid-cols-1.gap-8.items-stretch(class="md:grid-cols-4")
+    .grid.grid-cols-1.gap-8.items-stretch(class="md:grid-cols-1")
         div.bg-pink-500(v-for="video in videos")
-            a.relative(:href="video.videoUrl", target="_blank")
+            iframe.w-full(:src="video.videoUrl", height="600", allow="accelerometer; fullscreen", allowfullscreen)
+            //-a.relative(:href="video.videoUrl", target="_blank")
                 img.w-full(:src="video.imageUrl")
                 .bg-pink-500.inset-0.absolute.opacity-0.transition(class="hover:opacity-80")
                 vsx-icon.text-white.absolute.center(iconName="VideoPlay", class="top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2")
-            .p-4 
+            //-.p-4 
                 h6.text-sm.text-white.font-medium {{  video.title  }}
 
     

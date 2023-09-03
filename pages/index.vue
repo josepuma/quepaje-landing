@@ -86,20 +86,23 @@
     ]
 
     const videosLeyendas: Array<VideoSection> = [
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial', subtitle: 'Décadas del 60 al  80' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial', subtitle: 'Décadas del 70 y 80' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial', subtitle: 'Décadas del 70 y 80' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
-        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/watch?v=lM02vNMRRB0&ab_channel=NatureRelaxationFilms', title: 'Video Referencial' },
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/embed/kfQ_1uvh-xI?si=2S7rTXBXpQLfvUka', title: 'Video Referencial', subtitle: 'Décadas del 60 al  80' }
+    ]
+
+    const videosHablemos: Array<VideoSection> = [
+        { imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uY2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60', videoUrl: 'https://www.youtube.com/embed/iBTEDOFUYYk?si=d9DrO-_as4KlQuIS', title: 'Video Referencial', subtitle: 'Décadas del 60 al  80' }
     ]
 
     const imagesGuepajeA: Array<Image> = [
-        { url: '/img/header_a.jpg' },
-        { url: '/img/header_b.jpg' }
-    ]
+        { url: '/img/guepaje1.jpg' }
+    ];
+
+    const imagesGuepajeB: Array<Image> = [
+        { url: '/img/guepaje2.png' }
+    ];
+
+    const imagesGuepajeC: Array<Image> = [
+    ];
 
 </script>
 
@@ -110,8 +113,8 @@ div
         MainSectionHeader(title="Presentación", content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ratione suscipit expedita illum? Quia corrupti optio expedita voluptatum commodi autem, quibusdam ipsa labore quos cupiditate, sint itaque amet ratione fuga")
         .container.mx-auto.px-4
             MainSectionImageContent(id="header-a", :images="imagesGuepajeA", type="singleLink", badge="2022", align="right", title="Güepajé Vol. 1", content="Para esta primera edición, decidimos enfocarnos en la historia de la cumbia peruana a partir de los sellos y disqueras de Lima que hicieron posible su crecimiento y desarrollo entre las décadas del 60 al 80. Este encuentro incluyó sesiones de escucha con músicos que formaron parte de agrupaciones históricas de cumbia peruana, así como conversatorios con investigadores, especialistas y testigos de época, quienes ofrecieron su visión y testimonio sobre la cultura creada a partir de este género. Por último, una exposición museográfica cuyos contenidos les presentamos a continuación:", :links="linksGuepajeA")
-            MainSectionImageContent(id="header-b", :images="imagesGuepajeA", type="groupLink", badge="2023", align="left", title="Güepajé Vol. 2", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :links="linksGuepajeB")
-            MainSectionVideoContent(id="videos", align="left", :images="imagesGuepajeA", title="Leyendas de la cumbia peruana", content="Videos con las entrevistas en vivo a músicos históricos que participaron en las dos ediciones de Güepajé. ", :videos="videosLeyendas")
-            MainSectionVideoContent(id="videos2", align="right", :images="imagesGuepajeA", title="Hablemos sobre cumbia peruana", content="Videos de las charlas en vivo con especialistas e investigadores de la cumbia peruana que participaron en las dos ediciones de Güepajé.", :videos="videosLeyendas")
+            MainSectionImageContent(id="header-b", :images="imagesGuepajeB", type="groupLink", badge="2023", align="left", title="Güepajé Vol. 2", content="En nuestra segunda edición diseñamos una exposición sobre los orígenes y desarrollo de las cumbias regionales del Perú entre las décadas del 50 al 90. De esta manera, narramos el desarrollo de este género a lo largo del territorio nacional, con episodios fundamentales como la aparición de orquestas tropicales en los años 50, la influencia del rock en el estilo peruano de la guitarra eléctrica, la incorporación de instrumentos electrónicos en la chicha, la labor fundamental de Rosita Producciones o la invisibilizada participación de las mujeres en la cumbia nacional. ", :links="linksGuepajeB")
+            MainSectionVideoContent(id="videos", align="left", :images="imagesGuepajeC", title="Leyendas de la cumbia peruana", content="Videos con las entrevistas en vivo a músicos históricos que participaron en las dos ediciones de Güepajé. ", :videos="videosLeyendas")
+            MainSectionVideoContent(id="videos2", align="right", :images="imagesGuepajeC", title="Hablemos sobre cumbia peruana", content="Videos de las charlas en vivo con especialistas e investigadores de la cumbia peruana que participaron en las dos ediciones de Güepajé.", :videos="videosHablemos")
             MainSectionCreditos
 </template>
