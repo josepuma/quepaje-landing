@@ -51,4 +51,9 @@ section.py-24
                                 p.text-md.transition.font-medium 
                                     span.text-pink-500 {{  credito.title  }}  
                                     span.text-white  {{  credito.name  }}     
+
+
+    .mt-16 
+        .grid.grid-cols-6.gap-4
+            img(:src="`img/logos/${i}.svg`", v-for="i in 12")
 </template>
