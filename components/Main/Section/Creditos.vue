@@ -7,16 +7,19 @@
 
     const creditosA : Array<Credito> = [
         { title: 'Producción General: ', name: 'Lucho Pacora' },
-        { title: 'Coordinación: ', name: 'Yasmín León' },
-        { title: 'Diseño visual: ', name: 'Samuel Gutiérrez (Familia Gutiérrez) ' },
-        { title: 'Investigación: ', name: 'Lucho Pacora + DDDDD' },
-        { title: 'Archivo fotográfico: ', name: 'DDDDD' }
+        { title: 'Producción Ejecutiva: ', name: 'Yasmín León' },
+        { title: 'Identidad visual e infografías: ', name: 'Catalán Studio ' },
+        { title: 'Equipo de investigación: ', name: 'Lucho Pacora + Sara Nogales ' },
+        { title: 'Archivo fotográfico: ', name: 'Alberto ‘Chino’ Valderrama  ' },
+        { title: 'Diseño de portada: ', name: 'Samuel Gutiérrez (Familia Gutiérrez) ' }
     ]
 
     const creditosB : Array<Credito> = [
         { title: 'Producción General: ', name: 'Lucho Pacora' },
-        { title: 'Coordinación: ', name: 'Yasmín León' },
-        { title: 'Diseño visual: ', name: 'Nación Chicha' }
+        { title: 'Producción Ejecutiva: ', name: 'Yasmín León' },
+        { title: 'Identidad visual e infografías: ', name: 'Bidkar Yapo (Nación Chicha)' },
+        { title: 'Equipo de investigación: ', name: 'Lucho Pacora + Yawar Mestas + Danneth Valeriano + Rous Condori + César Zevallos + Percy Flores + Fernando Ríos + Néstor Sedano + Kevin de los Ríos + Anthony Quispe' },
+        { title: 'Diseño de portada: ', name: 'Nación Chicha' },
     ]
 
 </script>
